@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/fiedl/your_platform
-  revision: ff6f43225e7939baef35839cccb24ebdb749109c
+  revision: 696eac5d7deb1edf81fbac94a5dde8718203d905
   branch: master
   specs:
     your_platform (1.0.1)
@@ -21,12 +21,8 @@ GIT
       acts_as_tree
       apipie-rails (~> 0.5)
       auto_html (~> 1.6.4)
-      autosize-rails
       bcrypt (>= 3.0.1)
-      best_in_place (>= 2.1.0)
       biggs
-      bootstrap (~> 4.3.1)
-      bootstrap_tokenfield_rails
       bundler (>= 1.9.4)
       cancancan (~> 1.15.0)
       carrierwave (~> 0.11)
@@ -38,7 +34,6 @@ GIT
       devise_masquerade (~> 0.5.3)
       devise_token_auth (= 1.1.0)
       discourse_api
-      edit_mode (>= 1.0.5)
       elasticsearch-model
       eventmachine (>= 1.0.7)
       excelinator
@@ -52,21 +47,18 @@ GIT
       gemoji (>= 2.1.0)
       gender_detector
       geocoder
-      gravatar_image_tag
       groupdate
       haml (~> 4.0)
       i18n-js (>= 3.0.0.rc8)
       icalendar
-      impressionist
-      jquery-atwho-rails (>= 1.1.0)
-      jquery-fileupload-rails
+      impressionist (~> 1.6)
       jquery-rails
-      jquery-turbolinks
       judge
       mail (~> 2.6.6.rc1)
       mail_form
       merit
       mini_magick (>= 4.9.4)
+      naturally
       neography
       net-ldap
       nokogiri (>= 1.10.4)
@@ -78,10 +70,6 @@ GIT
       rack-mini-profiler
       rack-ssl (>= 1.3.4)
       rails (~> 5.0.0)
-      rails-assets-imagesloaded
-      rails-assets-inline-attachment
-      rails-assets-jquery-ui
-      rails-assets-trentrichardson--jQuery-Timepicker-Addon (>= 1.6.3)
       rails-i18n
       rails-settings-cached (>= 0.6.5)
       redcarpet (>= 3.3.2)
@@ -96,18 +84,16 @@ GIT
       rubyzip (>= 1.3.0)
       sass (>= 3.7.4)
       sass-rails
+      sepa_king
       sidekiq (~> 4.0)
       simple_form (>= 5.0.0)
       sprockets-rails (>= 2.3.2)
       sugar-rails
       table-formatter
       to_xls
-      turboboost
-      turbolinks (>= 5.0)
       uglifier (>= 2.7.2)
       vcardigan
       wannabe_bool
-      will_paginate (> 3.0)
       yard (>= 0.9.20)
 
 GIT
@@ -171,35 +157,23 @@ GEM
       tzinfo (~> 1.1)
     acts-as-taggable-on (4.0.0)
       activerecord (>= 4.0)
-    acts_as_tree (2.9.0)
+    acts_as_tree (2.9.1)
       activerecord (>= 3.0.0)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     ambry (1.0.0)
-    apipie-rails (0.5.16)
+    apipie-rails (0.5.18)
       rails (>= 4.1)
     arel (7.1.4)
     auto_html (1.6.4)
       redcarpet (~> 3.1)
       rinku (~> 1.5.0)
-    autoprefixer-rails (9.7.1)
-      execjs
-    autosize-rails (1.18.17)
-      rails (>= 3.1)
-    bcrypt (3.1.13)
-    best_in_place (3.1.1)
-      actionpack (>= 3.2)
-      railties (>= 3.2)
+    bcrypt (3.1.15)
     biggs (0.3.3)
       activerecord (>= 3.0)
     bindex (0.5.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap (4.3.1)
-      autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 1.14.3, < 2)
-      sassc-rails (>= 2.0.0)
-    bootstrap_tokenfield_rails (0.12.1)
     brakeman (3.7.2)
     builder (3.2.3)
     c32 (0.2.0)
@@ -217,8 +191,8 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
-    charlock_holmes (0.7.6)
-    chartkick (3.2.2)
+    charlock_holmes (0.7.7)
+    chartkick (3.4.0)
     childprocess (0.7.1)
       ffi (~> 1.0, >= 1.0.11)
     choice (0.2.0)
@@ -233,8 +207,8 @@ GEM
     coffee-script-source (1.12.2)
     colored (1.2)
     concurrent-ruby (1.1.5)
-    connection_pool (2.2.2)
-    crass (1.0.4)
+    connection_pool (2.2.3)
+    crass (1.0.6)
     database_cleaner (1.6.1)
     debug_inspector (0.0.3)
     decent_exposure (3.0.2)
@@ -252,27 +226,23 @@ GEM
       devise (> 3.5.2, < 4.7)
       rails (>= 4.2.0, < 6)
     diff-lcs (1.3)
-    discourse_api (0.38.0)
-      faraday (~> 0.9)
-      faraday_middleware (~> 0.10)
+    discourse_api (0.42.0)
+      faraday (~> 1.0)
+      faraday_middleware (~> 1.0)
       rack (>= 1.6)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    edit_mode (1.0.5)
-      jquery-rails
-      jquery-turbolinks
-      rails (>= 3.2)
-    elasticsearch (7.4.0)
-      elasticsearch-api (= 7.4.0)
-      elasticsearch-transport (= 7.4.0)
-    elasticsearch-api (7.4.0)
+    elasticsearch (7.9.0)
+      elasticsearch-api (= 7.9.0)
+      elasticsearch-transport (= 7.9.0)
+    elasticsearch-api (7.9.0)
       multi_json
-    elasticsearch-model (7.0.0)
+    elasticsearch-model (7.1.1)
       activesupport (> 3)
       elasticsearch (> 1)
       hashie
-    elasticsearch-transport (7.4.0)
-      faraday
+    elasticsearch-transport (7.9.0)
+      faraday (~> 1)
       multi_json
     email_reply_parser (0.5.10)
     email_spec (2.1.1)
@@ -283,10 +253,10 @@ GEM
     eventmachine (1.2.7)
     excelinator (1.3.1)
       spreadsheet
-    exception_notification (4.4.0)
+    exception_notification (4.4.3)
       actionmailer (>= 4.0, < 7)
       activesupport (>= 4.0, < 7)
-    excon (0.68.0)
+    excon (0.76.0)
     execjs (2.7.0)
     extended_email_reply_parser (0.5.1)
       activesupport
@@ -298,59 +268,50 @@ GEM
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
-    faker (2.7.0)
-      i18n (>= 1.6, < 1.8)
-    faraday (0.17.0)
+    faker (2.13.0)
+      i18n (>= 1.6, < 2)
+    faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.13.1)
-      faraday (>= 0.7.4, < 1.0)
+    faraday_middleware (1.0.0)
+      faraday (~> 1.0)
     ffi (1.11.1)
     fiedl-log (0.3.0)
       colored
     flamegraph (0.9.5)
-    foreman (0.86.0)
+    foreman (0.87.2)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     gemoji (3.0.1)
     gender_detector (2.0.0)
-    geocoder (1.5.2)
+    geocoder (1.6.3)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    gravatar_image_tag (1.2.0)
-    groupdate (4.2.0)
+    groupdate (5.1.0)
       activesupport (>= 5)
     haml (4.0.7)
       tilt
-    hashie (4.0.0)
+    hashie (4.1.0)
     htmlentities (4.3.4)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
-    i18n-js (3.4.1)
+    i18n-js (3.7.1)
       i18n (>= 0.6.6)
-    icalendar (2.5.3)
+    iban-tools (1.1.0)
+    icalendar (2.6.1)
       ice_cube (~> 0.16)
     ice_cube (0.16.3)
     image_processing (0.4.4)
     impressionist (1.6.1)
       nokogiri (~> 1)
-    jquery-atwho-rails (1.5.4)
-    jquery-fileupload-rails (1.0.0)
-      actionpack (>= 3.1)
-      railties (>= 3.1)
-      sassc
-    jquery-rails (4.3.5)
+    jquery-rails (4.4.0)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-    jquery-turbolinks (2.1.0)
-      railties (>= 3.1.0)
-      turbolinks
     json (2.2.0)
     judge (3.0.0)
       rails (>= 5.0)
-    kgio (2.11.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.4.1)
@@ -360,7 +321,7 @@ GEM
       letter_opener (~> 1.0)
       railties (>= 3.2)
     libv8 (7.3.492.27.1)
-    loofah (2.3.0)
+    loofah (2.4.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.6.6)
@@ -368,21 +329,23 @@ GEM
     mail_form (1.8.0)
       actionmailer (>= 5.0)
       activemodel (>= 5.0)
-    merit (3.0.3)
+    merit (4.0.1)
       ambry (~> 1.0.0)
+      zeitwerk
     method_source (0.8.2)
     mime-types (2.99.3)
-    mimemagic (0.3.3)
+    mimemagic (0.3.5)
     mini_magick (4.9.5)
     mini_mime (0.1.4)
     mini_portile2 (2.4.0)
     mini_racer (0.2.6)
       libv8 (>= 6.9.411)
     minitest (5.12.2)
-    multi_json (1.14.1)
+    multi_json (1.15.0)
     multipart-post (2.1.1)
     mustermann (1.0.3)
     mysql2 (0.5.2)
+    naturally (2.2.0)
     neography (1.8.0)
       excon (>= 0.33.0)
       json (>= 1.7.7)
@@ -390,24 +353,23 @@ GEM
       os (>= 0.9.6)
       rake (>= 0.8.7)
       rubyzip (>= 1.0.0)
-    net-ldap (0.16.1)
+    net-ldap (0.16.3)
     netrc (0.11.0)
     nio4r (2.5.2)
-    nokogiri (1.10.4)
+    nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     oauth (0.5.4)
     orm_adapter (0.5.0)
-    os (1.0.1)
+    os (1.1.1)
     parallel (1.12.0)
     parallel_tests (2.14.3)
       parallel
     pdf-core (0.6.1)
-    phony (2.18.8)
+    phony (2.18.15)
     poltergeist (1.16.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
       websocket-driver (>= 0.2.0)
-    popper_js (1.14.5)
     prawn (2.0.2)
       pdf-core (~> 0.6.0)
       ttfunk (~> 1.4.0)
@@ -424,12 +386,14 @@ GEM
       i18n (>= 0.5.0)
       railties (>= 3.0.0)
     public_suffix (4.0.1)
-    puma (3.10.0)
-    rack (2.0.7)
+    puma (4.3.3)
+      nio4r (~> 2.0)
+    rack (2.2.2)
     rack-accept (0.4.5)
       rack (>= 0.4)
-    rack-cors (1.0.3)
-    rack-mini-profiler (1.1.3)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
+    rack-mini-profiler (2.0.4)
       rack (>= 1.2.0)
     rack-protection (2.0.7)
       rack
@@ -450,14 +414,6 @@ GEM
       bundler (>= 1.3.0)
       railties (= 5.0.7.2)
       sprockets-rails (>= 2.0.0)
-    rails-assets-ev-emitter (1.1.1)
-    rails-assets-imagesloaded (4.1.4)
-      rails-assets-ev-emitter (>= 1.0.0, < 2)
-    rails-assets-inline-attachment (2.0.3)
-    rails-assets-jquery (3.4.1)
-    rails-assets-jquery-ui (1.12.1)
-      rails-assets-jquery (>= 1.6)
-    rails-assets-trentrichardson--jQuery-Timepicker-Addon (1.6.3)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -479,25 +435,24 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    raindrops (0.19.0)
     rake (13.0.0)
-    rb-fsevent (0.10.3)
-    rb-inotify (0.10.0)
+    rb-fsevent (0.10.4)
+    rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rdiscount (2.2.0.1)
+    rdiscount (2.2.0.2)
     redcarpet (3.5.0)
     redis (3.3.5)
-    redis-actionpack (5.1.0)
-      actionpack (>= 4.0, < 7)
-      redis-rack (>= 1, < 3)
+    redis-actionpack (5.2.0)
+      actionpack (>= 5, < 7)
+      redis-rack (>= 2.1.0, < 3)
       redis-store (>= 1.1.0, < 2)
     redis-activesupport (5.2.0)
       activesupport (>= 3, < 7)
       redis-store (>= 1.3, < 2)
-    redis-namespace (1.6.0)
+    redis-namespace (1.8.0)
       redis (>= 3.0.4)
-    redis-rack (2.0.6)
-      rack (>= 1.5, < 3)
+    redis-rack (2.1.3)
+      rack (>= 2.0.8, < 3)
       redis-store (>= 1.2, < 2)
     redis-rails (5.0.2)
       redis-actionpack (>= 5.0, < 6)
@@ -512,7 +467,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
-    reverse_markdown (1.3.0)
+    reverse_markdown (2.0.0)
       nokogiri
     rinku (1.5.1)
     rspec (3.6.0)
@@ -545,7 +500,7 @@ GEM
     rspec-support (3.6.0)
     ruby-graphviz (1.2.3)
     ruby-ole (1.2.12.2)
-    ruby-trello (2.1.0)
+    ruby-trello (2.2.0)
       activemodel (>= 3.2.0)
       addressable (~> 2.3)
       json
@@ -570,12 +525,16 @@ GEM
     selenium-webdriver (3.5.1)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
+    sepa_king (0.12.0)
+      activemodel (>= 3.1)
+      iban-tools
+      nokogiri
     sidekiq (4.2.10)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
       rack-protection (>= 1.5.0)
       redis (~> 3.2, >= 3.2.1)
-    simple_form (5.0.1)
+    simple_form (5.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
     sinatra (2.0.7)
@@ -584,7 +543,7 @@ GEM
       rack-protection (= 2.0.7)
       tilt (~> 2.0)
     slop (3.6.0)
-    spreadsheet (1.2.5)
+    spreadsheet (1.2.6)
       ruby-ole (>= 1.0)
     spring (2.0.2)
       activesupport (>= 4.2)
@@ -610,11 +569,6 @@ GEM
     to_xls (1.5.3)
       spreadsheet
     ttfunk (1.4.0)
-    turboboost (0.1.1)
-      coffee-rails
-      jquery-rails
-      railties
-      turbolinks
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -630,13 +584,10 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.6)
-    unicorn (5.3.0)
-      kgio (~> 2.6)
-      raindrops (~> 0.7)
     vcardigan (0.0.9)
     wannabe_bool (0.7.1)
-    warden (1.2.8)
-      rack (>= 2.0.6)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (3.6.2)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -645,10 +596,10 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
-    will_paginate (3.2.1)
     xpath (2.1.0)
       nokogiri (~> 1.3)
     yard (0.9.20)
+    zeitwerk (2.4.0)
 
 PLATFORMS
   ruby
@@ -697,7 +648,6 @@ DEPENDENCIES
   turbolinks!
   turnout!
   uglifier (>= 1.3.0)!
-  unicorn!
   web-console!
   yard!
   your_platform!
@@ -706,4 +656,4 @@ RUBY VERSION
    ruby 2.6.2p47
 
 BUNDLED WITH
-   1.17.3
+   2.1.4

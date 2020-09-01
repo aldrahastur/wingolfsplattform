@@ -40,6 +40,20 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :groups do
+    resources :free_groups
+  end
+
+  namespace :api do
+    namespace :v1 do
+      resources :users do
+        get :leibfamilie, to: 'users/leibfamilie#show'
+        put :leibfamilie, to: 'users/leibfamilie#update'
+        post 'leibfamilie/leibfuxen', to: 'users/leibfamilie/leibfuxen#create'
+      end
+    end
+  end
+
   get "map/show"
 
   # http://railscasts.com/episodes/53-handling-exceptions-revised
