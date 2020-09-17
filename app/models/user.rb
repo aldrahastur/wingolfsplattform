@@ -15,7 +15,7 @@ module UserOverrides
 
   def default_avatar_path
     if wingolfit?
-      "https://github.com/fiedl/wingolfsplattform/raw/master/app/assets/images/avatar_480.png"
+      "/images/avatar_480.png"
     else
       super
     end
@@ -29,6 +29,7 @@ class User
   include UserNetenvData
 
   scope :wingolfiten, -> { joins(:groups).where(groups: {id: Group.alle_wingolfiten.id}) }
+  scope :regular, -> { wingolfiten.alive }
 
   def name_affix
     "#{aktivitaetszahl} #{string_for_death_symbol}".gsub("  ", " ").strip
